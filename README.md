@@ -8,14 +8,14 @@
 ## Features
 
 Core Location framework supports majorly,
-[*] User Current Location
-[ ] Geocoding (via Apple Geocoder)
-[ ] Reverse Geocoding (via Apple Geocoder)
-[ ] Geocoding (via Google Places APIs)
-[ ] Near By Places (via Google Landark APIs)
-[ ] Geofencing
+- [x] User Current Location
+- [ ] Geocoding (via Apple Geocoder)
+- [ ] Reverse Geocoding (via Apple Geocoder)
+- [ ] Geocoding (via Google Places APIs)
+- [ ] Near By Places (via Google Landark APIs)
+- [ ] Geofencing
 
-And, this helper class will cover all the functionality under the single hood. 
+And, this helper class will cover all the functionality under the single hood.
 
 ## Installation
 
@@ -83,6 +83,7 @@ print(address)
 ## Contributor
 
 [Abhishek Kumar Ravi]((https://greensyntax.co.in))
+
 ab.abhshe.ravi@gmail.com
 
 ## License
