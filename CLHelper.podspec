@@ -8,8 +8,8 @@
 
 Pod::Spec.new do |s|
   s.name             = 'CLHelper'
-  s.version          = '0.1.0'
-  s.summary          = 'A short description of CLHelper.'
+  s.version          = '1.0.1'
+  s.summary          = 'A Classic Way to manage Core Location Jobs'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+  'CLHelper is a helper file which will help in managing all your Core Location related task in a neat way with closures.'
                        DESC
 
   s.homepage         = 'https://github.com/greenSyntax/CLHelper'
@@ -26,7 +26,7 @@ TODO: Add long description of the pod here.
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'greenSyntax' => 'ab.abhishek.ravi@gmail.com' }
   s.source           = { :git => 'https://github.com/greenSyntax/CLHelper.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  s.social_media_url = 'https://twitter.com/greenSyntax'
 
   s.ios.deployment_target = '8.0'
 

@@ -1,0 +1,6 @@
+framework module Pods_CLHelper_Example {
+  umbrella header "Pods-CLHelper_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}
