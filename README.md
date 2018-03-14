@@ -21,6 +21,12 @@ pod 'CLHelper'
 
 ## Usage
 
+First, import the module in your screen,
+
+```swift
+import CLHelper
+```
+
 * Get User Current Location Update
 
 ```swift
