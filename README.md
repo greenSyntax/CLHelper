@@ -27,7 +27,9 @@ First, import the module in your screen,
 import CLHelper
 ```
 
-* Get User Current Location Update
+####  Current Location Update
+
+*If There is sucess, then you'll get an array of locations of CLLocation type.
 
 ```swift
 
@@ -38,13 +40,37 @@ CLHelper.shared.getLocation { (locations, error) in
 
 ```
 
-If you have error occured,
+* If you have error occured, then there is an object of CLHelperError
 
 ```swift
 CLHelper.shared.getLocation { (locations, error) in
 
     print(error?.localizedText)
 }
+```
+
+#### Geocoding
+
+It will convert your coordinate (i.e. latitude longitude) into human-readable geographical address. 
+
+```swift
+
+// Coordinate
+let myCoordinate = CLLocationCoordinate2D(latitude: 28.581407, longitude: 77.321507)
+
+CLHelper.shared.getAddess(coodinate: myCoordinate) { (address, error) in
+
+guard error == nil else{
+
+//Handle error
+
+return
+}
+
+// Return Full Formatted Address
+print(address)
+}
+
 ```
 
 ## Author
