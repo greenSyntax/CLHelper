@@ -5,10 +5,17 @@
 [![License](https://img.shields.io/cocoapods/l/CLHelper.svg?style=flat)](http://cocoapods.org/pods/CLHelper)
 [![Platform](https://img.shields.io/cocoapods/p/CLHelper.svg?style=flat)](http://cocoapods.org/pods/CLHelper)
 
-## Example
+## Features
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
+Core Location framework supports majorly,
+[*] User Current Location
+[ ] Geocoding (via Apple Geocoder)
+[ ] Reverse Geocoding (via Apple Geocoder)
+[ ] Geocoding (via Google Places APIs)
+[ ] Near By Places (via Google Landark APIs)
+[ ] Geofencing
 
+And, this helper class will cover all the functionality under the single hood. 
 
 ## Installation
 
@@ -51,7 +58,7 @@ CLHelper.shared.getLocation { (locations, error) in
 
 #### Geocoding
 
-It will convert your coordinate (i.e. latitude longitude) into human-readable geographical address. 
+It will convert your coordinate (i.e. latitude longitude) into human-readable geographical address.
 
 ```swift
 
@@ -73,9 +80,10 @@ print(address)
 
 ```
 
-## Author
+## Contributor
 
-Abhishek Kumar Ravi
+[Abhishek Kumar Ravi]((https://greensyntax.co.in))
+ab.abhshe.ravi@gmail.com
 
 ## License
 
