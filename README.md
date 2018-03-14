@@ -1,4 +1,4 @@
-# CLHelper
+# Core Location Helper
 
 [![CI Status](http://img.shields.io/travis/greenSyntax/CLHelper.svg?style=flat)](https://travis-ci.org/greenSyntax/CLHelper)
 [![Version](https://img.shields.io/cocoapods/v/CLHelper.svg?style=flat)](http://cocoapods.org/pods/CLHelper)
@@ -9,7 +9,6 @@
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
-## Requirements
 
 ## Installation
 
@@ -20,9 +19,31 @@ it, simply add the following line to your Podfile:
 pod 'CLHelper'
 ```
 
+## Usage
+
+* Get User Current Location Update
+
+```swift
+
+CLHelper.shared.getLocation { (locations, error) in
+
+    print(locations)
+}
+
+```
+
+If you have error occured,
+
+```swift
+CLHelper.shared.getLocation { (locations, error) in
+
+    print(error?.localizedText)
+}
+```
+
 ## Author
 
-greenSyntax, ab.abhishek.ravi@gmail.com
+Abhishek Kumar Ravi
 
 ## License
 

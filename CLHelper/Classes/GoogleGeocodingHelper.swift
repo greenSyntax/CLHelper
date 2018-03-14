@@ -16,12 +16,14 @@ enum GoogleGeocodingError: Error {
 }
 
 class GoogleGeocodingHelper {
- 
+
+    static let apiKey = ""
+
     static let googleApi = "https://maps.googleapis.com/maps/api/geocode/json?"
     
     static func getAddess(coodinate:CLLocationCoordinate2D, completionHandler handler:@escaping (String?, GoogleGeocodingError?)->Void) {
         
-        let apiUrl = googleApi+"latlng=\(coodinate.latitude),\(coodinate.longitude)&key=\(Constants.ApiKeys.googleApiKey)"
+        let apiUrl = googleApi+"latlng=\(coodinate.latitude),\(coodinate.longitude)&key=\(apiKey)"
         
         if let requestURL = URL(string: apiUrl) {
          
@@ -79,7 +81,7 @@ class GoogleGeocodingHelper {
     
     static func getLandmarkAddess(coodinate:CLLocationCoordinate2D, completionHandler handler:@escaping ((address:String?, landmark:String?)?, GoogleGeocodingError?)->Void) {
         
-        let apiUrl = googleApi+"latlng=\(coodinate.latitude),\(coodinate.longitude)&key=\(Constants.ApiKeys.googleApiKey)"
+        let apiUrl = googleApi+"latlng=\(coodinate.latitude),\(coodinate.longitude)&key=\(apiKey)"
         
         if let requestURL = URL(string: apiUrl) {
             

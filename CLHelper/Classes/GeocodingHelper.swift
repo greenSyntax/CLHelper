@@ -112,27 +112,27 @@ class GeocodingHelper {
     ///   - coordinate: UserCoordinate Object
     ///   - address: Geographical Address
     ///   - error: Geocoding Error Onject
-    static func getAddressFromCoordinate(coordinate: CLLocationCoordinate2D, gotAddress address: @escaping ([GeographicalAddress]) -> Void, onError error: @escaping (ErrorModel) -> Void) {
-        
-        // Get Location
-        let location = CLLocation(latitude: coordinate.latitude, longitude: coordinate.longitude)
-        
-        //Forward Geocoding
-        geocodingLocation.reverseGeocodeLocation(location) { (placemarks, placeError) in
-            
-            guard placeError == nil else{
-                
-                let err = ErrorManager.processError(error: placeError, errorCode: nil, errorMsg: nil)
-                error(err)
-                return
-            }
-            
-            if let lamdmarks = placemarks {
-                
-                address(parseGeocodePlaces(placemarks: lamdmarks))
-            }
-        }
-    }
+//    static func getAddressFromCoordinate(coordinate: CLLocationCoordinate2D, gotAddress address: @escaping ([GeographicalAddress]) -> Void, onError error: @escaping (ErrorModel) -> Void) {
+//
+//        // Get Location
+//        let location = CLLocation(latitude: coordinate.latitude, longitude: coordinate.longitude)
+//
+//        //Forward Geocoding
+//        geocodingLocation.reverseGeocodeLocation(location) { (placemarks, placeError) in
+//
+//            guard placeError == nil else{
+//
+//                let err = ErrorManager.processError(error: placeError, errorCode: nil, errorMsg: nil)
+//                error(err)
+//                return
+//            }
+//
+//            if let lamdmarks = placemarks {
+//
+//                address(parseGeocodePlaces(placemarks: lamdmarks))
+//            }
+//        }
+//    }
     
     //MARK:- Cordinate into Address 
     //=== Forward Geocoding ===
