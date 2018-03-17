@@ -3,42 +3,6 @@
 import Foundation
 import CoreLocation
 
-public enum CLHelperError: Error {
-
-    case noAuthorizationKey
-    case failedInGettingLocation
-    case deniedByUser
-    case restrictedByUserSettings
-    case unknown
-
-    var localizedText:String {
-
-        switch self {
-
-        case .noAuthorizationKey:
-            return "There is No Location Usage Key in Info.plist"
-
-        case .failedInGettingLocation:
-            return "Error while getting Locations"
-
-        case .deniedByUser:
-            return "User Has Denied the Loctaion Authorization"
-
-        case .restrictedByUserSettings:
-            return "Device Settings has disabled location service"
-
-        case .unknown:
-            return "Something went wrong"
-
-        }
-    }
-}
-
-public protocol CLHelperProtocol {
-    var authorizationText:String {get set}
-    var googleAPIKey: String {get set}
-}
-
 public class CLHelper: NSObject {
 
     fileprivate var locationHandler: (( _ locations: [CLLocation]?, _ error: Error?)->())?
@@ -46,7 +10,9 @@ public class CLHelper: NSObject {
     //private var instance: CLHelperProtocol!
 
     public static let shared = CLHelper()
-    private override init() {}
+    private override init() {
+
+    }
 
     public func getLocation(onCompletion:@escaping ( _ locations: [CLLocation]?, _ error: Error?)->()) {
 
@@ -107,6 +73,27 @@ extension CLHelper {
             }
         }
         return false
+    }
+
+}
+
+// Geocoding
+extension CLHelper {
+
+    public func getCoordinate(fromAddress address: String, onCompletion: @escaping (_ coodinate:Coordinate?, _ error: CLHelperError?)->()) {
+
+
+        GeocodingHelper.getCoordinatedFromAddress(address: address, gotCoordinate: { (userCoodinate) in
+
+            //onSuccess
+            onCompletion(userCoodinate, nil)
+
+        }) { (error) in
+
+            //onError
+            onCompletion(nil, error)
+        }
+
     }
 
 }

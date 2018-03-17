@@ -58,6 +58,28 @@ CLHelper.shared.getLocation { (locations, error) in
 
 #### Geocoding
 
+It will convert your address string into coordinate (lat-lon).
+
+```swift
+
+CLHelper.shared.getCoordinate(fromAddress: "New Delhi") { (coordinate, error) in
+
+    guard error == nil else {
+
+        print(error?.localizedDescription)
+        return
+    }
+
+    // Get Coordinate
+    print(coordinate?.latitude)
+    print(coordinate?.longitude)
+
+}
+
+```
+
+#### Reverse Geocoding
+
 It will convert your coordinate (i.e. latitude longitude) into human-readable geographical address.
 
 ```swift
@@ -79,6 +101,8 @@ print(address)
 }
 
 ```
+
+
 
 ## Contributor
 

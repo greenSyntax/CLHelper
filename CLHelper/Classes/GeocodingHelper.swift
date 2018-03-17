@@ -9,20 +9,11 @@
 import Foundation
 import CoreLocation
 
-
-/// Geocoding Error
-///
-/// - notFound: When Requested Object is Not Found
-enum GeoCodingError: Error {
-    
-    case notFound
-}
-
 /// Wrapper Around CLLocation Object
-struct UserCoordinate {
+public struct Coordinate {
     
-    var latitude: Double
-    var longitude: Double
+    public var latitude: Double
+    public var longitude: Double
     
     init(latitude: Double, longitude: Double) {
         
@@ -32,7 +23,7 @@ struct UserCoordinate {
 }
 
 /// Wrapper around CLPlacemark
-struct GeographicalAddress {
+public struct GeographicalAddress {
     
     var landmark: String?
     var timestamp: Date?
@@ -136,21 +127,21 @@ class GeocodingHelper {
     
     //MARK:- Cordinate into Address 
     //=== Forward Geocoding ===
-    static func getCoordinatedFromAddress(address: String, gotCoordinate: @escaping (UserCoordinate) -> Void, onError: @escaping (GeoCodingError) -> Void) {
+    static func getCoordinatedFromAddress(address: String, gotCoordinate: @escaping (Coordinate) -> Void, onError: @escaping (CLHelperError) -> Void) {
         
         CLGeocoder().geocodeAddressString(address) { (placemarks, error) in
             
             guard error == nil else{
                 
                 // Can't Get the Coordinate
-                onError(GeoCodingError.notFound)
+                onError(CLHelperError.addressNotFound)
                 return
             }
             
             if let location = placemarks?.first?.location {
                 
                 // Location Object of desired Address
-                let parsedCoordinate = UserCoordinate(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
+                let parsedCoordinate = Coordinate(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
                 
                 gotCoordinate(parsedCoordinate)
             }
