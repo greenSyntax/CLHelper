@@ -7,18 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0561E62C12C4C4E62CED99D8631DFA3F /* CLHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC322580D7C634A98C5B7AF3182156BF /* CLHelper.swift */; };
 		07536A6AD6BA9910BDCD73E7CDD6DAC0 /* Pods-CLHelper_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C1A5A1A0DF78496E28AF03E498085CAE /* Pods-CLHelper_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3CA52C16E5E4BCCE3378582CDA4CCC5E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		195A46E548BBE5F723A16C623F7D217E /* CLHelperError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E7A07EB23D5262D95E2A55AADF2672 /* CLHelperError.swift */; };
+		1EF5D66242FFCF7827A6826E91B701C5 /* CLHelper-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B9E875EB9E16C34354FF761E56244F99 /* CLHelper-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		41BCF4B9AAE27719FFA93A1923BEC232 /* CLHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6087B71DDE23CD7EE0E6EAE70401CA74 /* CLHelper.swift */; };
+		75A386F723658B1F53C5328CFFDD27ED /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 		8C071D20A9D29899DE2837465746A61B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 		97F4BBD22ED4E67D166383BC56C5A3FF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		9B737A72E8DDA5508B84AF9649F20A63 /* GeocodingHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACDE608B4E45D46CBB21E0178E43F10 /* GeocodingHelper.swift */; };
-		A3AA06DF7F2F62885E7A4691C6B1756B /* GoogleGeocodingHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6C7597AC567907A510BD5AAD9BCEBA /* GoogleGeocodingHelper.swift */; };
-		AF0193901439B1F5C015CC8EB13A7858 /* CLHelper-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CBD603F5F8E52B4BCA8DE3F7DA8076EC /* CLHelper-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		983DBDDA969B6B97A62EF9666426D9EC /* CLHelperProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC60B026A4847BCE52CD455B1548E3B /* CLHelperProtocol.swift */; };
+		B694814B82CDD260906E93373A863797 /* GeocodingHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD3F10D62FB854907C236D3462D8238 /* GeocodingHelper.swift */; };
 		B80389C4EFC62C348BB9FA3060E97D28 /* Pods-CLHelper_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 75869AFB0DC34D09916BC681E51FB7F4 /* Pods-CLHelper_Tests-dummy.m */; };
-		CC0DA67AD6F5E2DE4F7DF1465752B285 /* CLHelper-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B5EDC29B804A583DD05046A24BBD585 /* CLHelper-dummy.m */; };
+		D5CE51A9F1C89A8DF23B93ABD39C591D /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2F170B5546E32997D121D5DBD169D3 /* LocationManager.swift */; };
+		D717470E5658D20F75DB033D8179D08F /* GoogleGeocodingHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A19EDB1008847B0F18D449B50378685 /* GoogleGeocodingHelper.swift */; };
 		D7466DD7D06EC42B9BE0705AFC5F085F /* Pods-CLHelper_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E041880C60FA0FAF4E455985B79A4E7F /* Pods-CLHelper_Example-dummy.m */; };
-		DD1CB2C36295BC1A88F3A5B45258D151 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD592CE87B71C62CF23EEC2FCB80D10 /* LocationManager.swift */; };
+		E675313E68F500F18C5A8062A04D4E9D /* CLHelper-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 54E6C04C65E8D1D8013B8D12539CC4BD /* CLHelper-dummy.m */; };
 		E88A25FADE1B573777E3091E6A4661EA /* Pods-CLHelper_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E788A756A34C523C9A1252D112B49EDF /* Pods-CLHelper_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
@@ -27,7 +29,7 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = B1EEE645A05404E7E9347C4BB1EFDC09;
+			remoteGlobalIDString = 39F25A8971A7CA335CF905029079F960;
 			remoteInfo = CLHelper;
 		};
 /* End PBXContainerItemProxy section */
@@ -35,41 +37,43 @@
 /* Begin PBXFileReference section */
 		00EA080CCF10E857A2711DA994B40DA0 /* Pods-CLHelper_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CLHelper_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		0564D2EF198405241D0DC76774BBDB1E /* CLHelper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = CLHelper.framework; path = CLHelper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		164F6CEEDCB6AAC06F7E7EA72E729AC2 /* CLHelper-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CLHelper-prefix.pch"; sourceTree = "<group>"; };
 		16F867AD74ECA70A44679FEDA2885125 /* Pods-CLHelper_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CLHelper_Tests-frameworks.sh"; sourceTree = "<group>"; };
-		1C22332D0CB9E7AA36D9A78326355A88 /* CLHelper.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CLHelper.xcconfig; sourceTree = "<group>"; };
 		21E5DDA05BD0D1984A12C7789C5B4B68 /* Pods-CLHelper_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CLHelper_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		2D843B8653FBD796E9A0DE7DB259E8F4 /* Pods_CLHelper_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_CLHelper_Example.framework; path = "Pods-CLHelper_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2FCD9742BF6E684785D9EAEF9A8F8CA8 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		30D7CBE88BB488A9C1598D33C4619BA1 /* Pods-CLHelper_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CLHelper_Example-resources.sh"; sourceTree = "<group>"; };
 		34175F23733A67FB848E0AAF5DFE41AB /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3F833C94BA473A480924038BEB16FAF5 /* CLHelper.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CLHelper.xcconfig; sourceTree = "<group>"; };
 		4441C1DC2C98506C3539185F6CB412E9 /* Pods-CLHelper_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-CLHelper_Tests.modulemap"; sourceTree = "<group>"; };
+		4F2F170B5546E32997D121D5DBD169D3 /* LocationManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LocationManager.swift; path = CLHelper/Classes/LocationManager.swift; sourceTree = "<group>"; };
 		4F3CD97938E9DC45BEF7328BC45CB5BF /* Pods-CLHelper_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CLHelper_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		50BEB0F65057690018EDA1F468958F58 /* Pods-CLHelper_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CLHelper_Tests-resources.sh"; sourceTree = "<group>"; };
-		59A4419C626F20CC6DDAEB66A3E25833 /* CLHelper-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CLHelper-prefix.pch"; sourceTree = "<group>"; };
-		5C6C7597AC567907A510BD5AAD9BCEBA /* GoogleGeocodingHelper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GoogleGeocodingHelper.swift; path = CLHelper/Classes/GoogleGeocodingHelper.swift; sourceTree = "<group>"; };
-		638BAF79226BDD60B4B13089335C8688 /* CLHelper.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = CLHelper.modulemap; sourceTree = "<group>"; };
+		54E6C04C65E8D1D8013B8D12539CC4BD /* CLHelper-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CLHelper-dummy.m"; sourceTree = "<group>"; };
+		5A19EDB1008847B0F18D449B50378685 /* GoogleGeocodingHelper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GoogleGeocodingHelper.swift; path = CLHelper/Classes/GoogleGeocodingHelper.swift; sourceTree = "<group>"; };
+		6087B71DDE23CD7EE0E6EAE70401CA74 /* CLHelper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CLHelper.swift; path = CLHelper/Classes/CLHelper.swift; sourceTree = "<group>"; };
 		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		66B4727AE8F39AAA386F160021B86D2C /* Pods-CLHelper_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CLHelper_Example.release.xcconfig"; sourceTree = "<group>"; };
+		6C53FA16A704E568FF8D7D36628AA7AE /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		75869AFB0DC34D09916BC681E51FB7F4 /* Pods-CLHelper_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CLHelper_Tests-dummy.m"; sourceTree = "<group>"; };
 		7C54B4C2BEFA2A577D9A0C16F674A4A2 /* Pods_CLHelper_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_CLHelper_Tests.framework; path = "Pods-CLHelper_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		844364221295BE73630FB460ECC86455 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		888A41B88C09927747FFC6C68668AFB9 /* Pods-CLHelper_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CLHelper_Example-frameworks.sh"; sourceTree = "<group>"; };
+		92E7A07EB23D5262D95E2A55AADF2672 /* CLHelperError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CLHelperError.swift; path = CLHelper/Classes/CLHelperError.swift; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9B5EDC29B804A583DD05046A24BBD585 /* CLHelper-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CLHelper-dummy.m"; sourceTree = "<group>"; };
+		A987BBCB0850B95D1063675423F8DBCA /* CLHelper.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = CLHelper.modulemap; sourceTree = "<group>"; };
+		AAC60B026A4847BCE52CD455B1548E3B /* CLHelperProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CLHelperProtocol.swift; path = CLHelper/Classes/CLHelperProtocol.swift; sourceTree = "<group>"; };
 		ABA99AE9D29440727B36A025D7FE0E53 /* Pods-CLHelper_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-CLHelper_Example.modulemap"; sourceTree = "<group>"; };
-		BACDE608B4E45D46CBB21E0178E43F10 /* GeocodingHelper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GeocodingHelper.swift; path = CLHelper/Classes/GeocodingHelper.swift; sourceTree = "<group>"; };
+		B9E875EB9E16C34354FF761E56244F99 /* CLHelper-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CLHelper-umbrella.h"; sourceTree = "<group>"; };
+		BA7388CD94D576BADFF211AA40BE254D /* CLHelper.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = CLHelper.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		BC421E4A8ED5951F6A860BF6E14E9162 /* Pods-CLHelper_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CLHelper_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		BD1CA3E9915B09215D5D8E66F0E9024D /* Pods-CLHelper_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CLHelper_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		BFD592CE87B71C62CF23EEC2FCB80D10 /* LocationManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LocationManager.swift; path = CLHelper/Classes/LocationManager.swift; sourceTree = "<group>"; };
 		C1A5A1A0DF78496E28AF03E498085CAE /* Pods-CLHelper_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CLHelper_Example-umbrella.h"; sourceTree = "<group>"; };
-		CBD603F5F8E52B4BCA8DE3F7DA8076EC /* CLHelper-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CLHelper-umbrella.h"; sourceTree = "<group>"; };
-		CC322580D7C634A98C5B7AF3182156BF /* CLHelper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CLHelper.swift; path = CLHelper/Classes/CLHelper.swift; sourceTree = "<group>"; };
+		CAD3F10D62FB854907C236D3462D8238 /* GeocodingHelper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GeocodingHelper.swift; path = CLHelper/Classes/GeocodingHelper.swift; sourceTree = "<group>"; };
 		CF2AEA8ED322BF1B88E58AC5D09E3F39 /* Pods-CLHelper_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CLHelper_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		E041880C60FA0FAF4E455985B79A4E7F /* Pods-CLHelper_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CLHelper_Example-dummy.m"; sourceTree = "<group>"; };
 		E788A756A34C523C9A1252D112B49EDF /* Pods-CLHelper_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CLHelper_Tests-umbrella.h"; sourceTree = "<group>"; };
 		E9F4655046C0E2ECE539DD4AC7A09292 /* Pods-CLHelper_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CLHelper_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		ECAA42AC0CD13478DA9F5E24760FA7D0 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
-		F8C4A69BCE136755D4D6A3AA9D990D56 /* CLHelper.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = CLHelper.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		FDA190F2D9A43BDDAF199EF777EBBC44 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F8F5444200D955A35A9C25A67CD56142 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		FDCF662CFD068FF8C9D5C4298370898A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -82,11 +86,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C01271C6BC4CB33FAE443A36A8D16E20 /* Frameworks */ = {
+		AFA5288D1430B2788A6E06DDFA9F3182 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3CA52C16E5E4BCCE3378582CDA4CCC5E /* Foundation.framework in Frameworks */,
+				75A386F723658B1F53C5328CFFDD27ED /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,18 +105,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4BFC1588EF9566E3118A7A88A624545B /* CLHelper */ = {
+		008880F7654C8AD1CDB155A02C72FCAC /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				CC322580D7C634A98C5B7AF3182156BF /* CLHelper.swift */,
-				BACDE608B4E45D46CBB21E0178E43F10 /* GeocodingHelper.swift */,
-				5C6C7597AC567907A510BD5AAD9BCEBA /* GoogleGeocodingHelper.swift */,
-				BFD592CE87B71C62CF23EEC2FCB80D10 /* LocationManager.swift */,
-				668AC266ED826CAE2CE90434FEA665F0 /* Pod */,
-				91DEAACDD352063BA98A99B34F57633C /* Support Files */,
+				BA7388CD94D576BADFF211AA40BE254D /* CLHelper.podspec */,
+				6C53FA16A704E568FF8D7D36628AA7AE /* LICENSE */,
+				F8F5444200D955A35A9C25A67CD56142 /* README.md */,
 			);
-			name = CLHelper;
-			path = ../..;
+			name = Pod;
 			sourceTree = "<group>";
 		};
 		5E902A31B1AAD18ACF16F71D97BE1640 /* Pods-CLHelper_Example */ = {
@@ -133,20 +133,24 @@
 			path = "Target Support Files/Pods-CLHelper_Example";
 			sourceTree = "<group>";
 		};
-		668AC266ED826CAE2CE90434FEA665F0 /* Pod */ = {
+		6B54B0AEF2060315C891BBA014DB21C7 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				F8C4A69BCE136755D4D6A3AA9D990D56 /* CLHelper.podspec */,
-				2FCD9742BF6E684785D9EAEF9A8F8CA8 /* LICENSE */,
-				ECAA42AC0CD13478DA9F5E24760FA7D0 /* README.md */,
+				A987BBCB0850B95D1063675423F8DBCA /* CLHelper.modulemap */,
+				3F833C94BA473A480924038BEB16FAF5 /* CLHelper.xcconfig */,
+				54E6C04C65E8D1D8013B8D12539CC4BD /* CLHelper-dummy.m */,
+				164F6CEEDCB6AAC06F7E7EA72E729AC2 /* CLHelper-prefix.pch */,
+				B9E875EB9E16C34354FF761E56244F99 /* CLHelper-umbrella.h */,
+				844364221295BE73630FB460ECC86455 /* Info.plist */,
 			);
-			name = Pod;
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/CLHelper";
 			sourceTree = "<group>";
 		};
-		778A44DB10B3BE01EF03CCCDB873FC17 /* Development Pods */ = {
+		6E6DC3BC7713ECFE1E897A3D2217C83C /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				4BFC1588EF9566E3118A7A88A624545B /* CLHelper */,
+				EA7EA0A8A1F0C91176A51735623C3506 /* CLHelper */,
 			);
 			name = "Development Pods";
 			sourceTree = "<group>";
@@ -155,25 +159,11 @@
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				778A44DB10B3BE01EF03CCCDB873FC17 /* Development Pods */,
+				6E6DC3BC7713ECFE1E897A3D2217C83C /* Development Pods */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
 				A796AC8F51F204FC4D40CD1C50294989 /* Products */,
 				BEAFF93279F485BB41AE189868A93651 /* Targets Support Files */,
 			);
-			sourceTree = "<group>";
-		};
-		91DEAACDD352063BA98A99B34F57633C /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				638BAF79226BDD60B4B13089335C8688 /* CLHelper.modulemap */,
-				1C22332D0CB9E7AA36D9A78326355A88 /* CLHelper.xcconfig */,
-				9B5EDC29B804A583DD05046A24BBD585 /* CLHelper-dummy.m */,
-				59A4419C626F20CC6DDAEB66A3E25833 /* CLHelper-prefix.pch */,
-				CBD603F5F8E52B4BCA8DE3F7DA8076EC /* CLHelper-umbrella.h */,
-				FDA190F2D9A43BDDAF199EF777EBBC44 /* Info.plist */,
-			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/CLHelper";
 			sourceTree = "<group>";
 		};
 		A796AC8F51F204FC4D40CD1C50294989 /* Products */ = {
@@ -229,6 +219,22 @@
 			path = "Target Support Files/Pods-CLHelper_Tests";
 			sourceTree = "<group>";
 		};
+		EA7EA0A8A1F0C91176A51735623C3506 /* CLHelper */ = {
+			isa = PBXGroup;
+			children = (
+				6087B71DDE23CD7EE0E6EAE70401CA74 /* CLHelper.swift */,
+				92E7A07EB23D5262D95E2A55AADF2672 /* CLHelperError.swift */,
+				AAC60B026A4847BCE52CD455B1548E3B /* CLHelperProtocol.swift */,
+				CAD3F10D62FB854907C236D3462D8238 /* GeocodingHelper.swift */,
+				5A19EDB1008847B0F18D449B50378685 /* GoogleGeocodingHelper.swift */,
+				4F2F170B5546E32997D121D5DBD169D3 /* LocationManager.swift */,
+				008880F7654C8AD1CDB155A02C72FCAC /* Pod */,
+				6B54B0AEF2060315C891BBA014DB21C7 /* Support Files */,
+			);
+			name = CLHelper;
+			path = ../..;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -240,19 +246,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B8CB559B9B61C81C1DE51450701A4C62 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				AF0193901439B1F5C015CC8EB13A7858 /* CLHelper-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		CDB290B96D35C0C69D23BF757EA9DAC7 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				07536A6AD6BA9910BDCD73E7CDD6DAC0 /* Pods-CLHelper_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA5AA7B6FEA3CFD96EBC06F2EF2FEDA5 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1EF5D66242FFCF7827A6826E91B701C5 /* CLHelper-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,13 +282,13 @@
 			productReference = 7C54B4C2BEFA2A577D9A0C16F674A4A2 /* Pods_CLHelper_Tests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		B1EEE645A05404E7E9347C4BB1EFDC09 /* CLHelper */ = {
+		39F25A8971A7CA335CF905029079F960 /* CLHelper */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 76827F3626646D86F24890050BE8B3EA /* Build configuration list for PBXNativeTarget "CLHelper" */;
+			buildConfigurationList = CB276EB71BF616E58F7E9C259DD1A82F /* Build configuration list for PBXNativeTarget "CLHelper" */;
 			buildPhases = (
-				252328CB43877435E8ED78FD7227AC33 /* Sources */,
-				C01271C6BC4CB33FAE443A36A8D16E20 /* Frameworks */,
-				B8CB559B9B61C81C1DE51450701A4C62 /* Headers */,
+				7A0CD87B8B51087021149FB8F85894C8 /* Sources */,
+				AFA5288D1430B2788A6E06DDFA9F3182 /* Frameworks */,
+				EA5AA7B6FEA3CFD96EBC06F2EF2FEDA5 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -332,7 +338,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B1EEE645A05404E7E9347C4BB1EFDC09 /* CLHelper */,
+				39F25A8971A7CA335CF905029079F960 /* CLHelper */,
 				B961FC9CF2DC2512EA709F08FE3F80CF /* Pods-CLHelper_Example */,
 				0D80BCDBF4B43427C58CEBEBE19F086F /* Pods-CLHelper_Tests */,
 			);
@@ -340,18 +346,6 @@
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		252328CB43877435E8ED78FD7227AC33 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				CC0DA67AD6F5E2DE4F7DF1465752B285 /* CLHelper-dummy.m in Sources */,
-				0561E62C12C4C4E62CED99D8631DFA3F /* CLHelper.swift in Sources */,
-				9B737A72E8DDA5508B84AF9649F20A63 /* GeocodingHelper.swift in Sources */,
-				A3AA06DF7F2F62885E7A4691C6B1756B /* GoogleGeocodingHelper.swift in Sources */,
-				DD1CB2C36295BC1A88F3A5B45258D151 /* LocationManager.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		300B14E70CAA110AA84C41D3646013E2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -368,18 +362,95 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		7A0CD87B8B51087021149FB8F85894C8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E675313E68F500F18C5A8062A04D4E9D /* CLHelper-dummy.m in Sources */,
+				41BCF4B9AAE27719FFA93A1923BEC232 /* CLHelper.swift in Sources */,
+				195A46E548BBE5F723A16C623F7D217E /* CLHelperError.swift in Sources */,
+				983DBDDA969B6B97A62EF9666426D9EC /* CLHelperProtocol.swift in Sources */,
+				B694814B82CDD260906E93373A863797 /* GeocodingHelper.swift in Sources */,
+				D717470E5658D20F75DB033D8179D08F /* GoogleGeocodingHelper.swift in Sources */,
+				D5CE51A9F1C89A8DF23B93ABD39C591D /* LocationManager.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
 		AFF60FA62DCED91883E34A783E53F6F0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = CLHelper;
-			target = B1EEE645A05404E7E9347C4BB1EFDC09 /* CLHelper */;
+			target = 39F25A8971A7CA335CF905029079F960 /* CLHelper */;
 			targetProxy = C669F055D6F7DB6DE54EF955E3F406B8 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		07A9D9A1E399F9C4E035256315A35FDC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3F833C94BA473A480924038BEB16FAF5 /* CLHelper.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/CLHelper/CLHelper-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/CLHelper/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/CLHelper/CLHelper.modulemap";
+				PRODUCT_NAME = CLHelper;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		12C9D0A01EB6C718C903BD2F8C08E915 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3F833C94BA473A480924038BEB16FAF5 /* CLHelper.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/CLHelper/CLHelper-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/CLHelper/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/CLHelper/CLHelper.modulemap";
+				PRODUCT_NAME = CLHelper;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		27D18D792EB6F43FEECAE2A46C115755 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4F3CD97938E9DC45BEF7328BC45CB5BF /* Pods-CLHelper_Tests.debug.xcconfig */;
@@ -411,69 +482,6 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
-		};
-		30116DB15586C0FC31CCEF3FDE6E05BE /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1C22332D0CB9E7AA36D9A78326355A88 /* CLHelper.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/CLHelper/CLHelper-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/CLHelper/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/CLHelper/CLHelper.modulemap";
-				PRODUCT_NAME = CLHelper;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		33790025C240DC9FC85982CF84FA1B63 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1C22332D0CB9E7AA36D9A78326355A88 /* CLHelper.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/CLHelper/CLHelper-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/CLHelper/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/CLHelper/CLHelper.modulemap";
-				PRODUCT_NAME = CLHelper;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
 		};
 		4A4ADBAB4770AA39576E39D766815C78 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -709,11 +717,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		76827F3626646D86F24890050BE8B3EA /* Build configuration list for PBXNativeTarget "CLHelper" */ = {
+		CB276EB71BF616E58F7E9C259DD1A82F /* Build configuration list for PBXNativeTarget "CLHelper" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				30116DB15586C0FC31CCEF3FDE6E05BE /* Debug */,
-				33790025C240DC9FC85982CF84FA1B63 /* Release */,
+				12C9D0A01EB6C718C903BD2F8C08E915 /* Debug */,
+				07A9D9A1E399F9C4E035256315A35FDC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

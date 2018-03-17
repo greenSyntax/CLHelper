@@ -11,13 +11,34 @@ import CLHelper
 
 class ViewController: UIViewController, CLHelperProtocol {
 
-    var authorizationText: String = "App wants to access your location"
     var googleAPIKey: String = "NA"
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        getLocation()
+        //getLocation()
+
+        getCoordinate()
+
+    }
+
+
+    func getCoordinate() {
+
+        CLHelper.shared.getCoordinate(fromAddress: "New Delhi") { (coordinate, error) in
+
+            guard error == nil else {
+
+                print(error?.localizedDescription)
+                return
+            }
+
+            // Get Coordinate
+            print(coordinate?.latitude)
+            print(coordinate?.longitude)
+
+        }
+
     }
 
     func getLocation() {

@@ -1,5 +1,5 @@
 PODS:
-  - CLHelper (1.0.1)
+  - CLHelper (1.0.2)
 
 DEPENDENCIES:
   - CLHelper (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  CLHelper: 17e7dc4411c3e80e8bfb998a0740858bfa4f476a
+  CLHelper: 6c301a11e8f0161fa12e38ed3c13c77ce8e7d8a8
 
 PODFILE CHECKSUM: bef26370d0031a5f50b22403031daa6e077282b2
 
