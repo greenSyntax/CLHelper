@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 import CoreLocation
 
 /// Wrapper Around CLLocation Object
@@ -15,7 +16,7 @@ public struct Coordinate {
     public var latitude: Double
     public var longitude: Double
     
-    init(latitude: Double, longitude: Double) {
+    public init(latitude: Double, longitude: Double) {
         
         self.latitude = latitude
         self.longitude = longitude
@@ -41,8 +42,6 @@ public struct GeographicalAddress {
 class GeocodingHelper {
     
     fileprivate static let geocodingLocation = CLGeocoder()
-    
-    private init() {}
     
     // FIXME
     //MARK:- Private Parse CLPacemark in Custom Model
@@ -103,31 +102,32 @@ class GeocodingHelper {
     ///   - coordinate: UserCoordinate Object
     ///   - address: Geographical Address
     ///   - error: Geocoding Error Onject
-//    static func getAddressFromCoordinate(coordinate: CLLocationCoordinate2D, gotAddress address: @escaping ([GeographicalAddress]) -> Void, onError error: @escaping (ErrorModel) -> Void) {
-//
-//        // Get Location
-//        let location = CLLocation(latitude: coordinate.latitude, longitude: coordinate.longitude)
-//
-//        //Forward Geocoding
-//        geocodingLocation.reverseGeocodeLocation(location) { (placemarks, placeError) in
-//
-//            guard placeError == nil else{
-//
-//                let err = ErrorManager.processError(error: placeError, errorCode: nil, errorMsg: nil)
-//                error(err)
-//                return
-//            }
-//
-//            if let lamdmarks = placemarks {
-//
-//                address(parseGeocodePlaces(placemarks: lamdmarks))
-//            }
-//        }
-//    }
-    
+    static func reverseGeocoding(coordinate: CLLocationCoordinate2D, gotAddress address: @escaping ([GeographicalAddress]) -> Void, onError error: @escaping (CLHelperError) -> Void) {
+
+        // Get Location
+        let location = CLLocation(latitude: coordinate.latitude, longitude: coordinate.longitude)
+
+        //Forward Geocoding
+        geocodingLocation.reverseGeocodeLocation(location) { (placemarks, placeError) in
+
+            guard placeError == nil else{
+
+                print(placeError)
+                return
+            }
+
+            if let lamdmarks = placemarks {
+
+                let geoObject = address(parseGeocodePlaces(placemarks: lamdmarks))
+
+                print(geoObject)
+            }
+        }
+    }
+
     //MARK:- Cordinate into Address 
     //=== Forward Geocoding ===
-    static func getCoordinatedFromAddress(address: String, gotCoordinate: @escaping (Coordinate) -> Void, onError: @escaping (CLHelperError) -> Void) {
+    static func forwardGeocoding(address: String, gotCoordinate: @escaping (Coordinate) -> Void, onError: @escaping (CLHelperError) -> Void) {
         
         CLGeocoder().geocodeAddressString(address) { (placemarks, error) in
             

@@ -16,20 +16,47 @@ class ViewController: UIViewController, CLHelperProtocol {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        //1
         //getLocation()
 
-        getCoordinate()
+        // 2
+        //getCoordinate()
+
+        // 3
+        getAddress()
 
     }
 
 
-    func getCoordinate() {
+    func getAddress() {
 
-        CLHelper.shared.getCoordinate(fromAddress: "New Delhi") { (coordinate, error) in
+        // Gurgaon Coordinate
+        let coordinate = Coordinate(latitude: 28.4595, longitude: 77.0266)
+
+        let helper = CLHelper()
+
+        helper.getAddress(fromCoordinate: coordinate) { (address, error) in
 
             guard error == nil else {
 
-                print(error?.localizedDescription)
+                print(error?.localizedText)
+                return
+            }
+
+            if let suitedAddress: GeographicalAddress = address?.first {
+                print(suitedAddress)
+            }
+        }
+    }
+
+    func getCoordinate() {
+
+        let helper = CLHelper()
+        helper.getCoordinate(fromAddress: "New Delhi") { (coordinate, error) in
+
+            guard error == nil else {
+
+                print(error?.localizedText)
                 return
             }
 
@@ -43,9 +70,11 @@ class ViewController: UIViewController, CLHelperProtocol {
 
     func getLocation() {
 
-        CLHelper.shared.getLocation { (locations, error) in
+        let helper = CLHelper()
+        helper.getLocation { (locations, error) in
 
-            print(locations)
+            // Latest Coordinate
+            print(locations?.last)
         }
 
     }

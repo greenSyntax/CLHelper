@@ -7,12 +7,8 @@ public class CLHelper: NSObject {
 
     fileprivate var locationHandler: (( _ locations: [CLLocation]?, _ error: Error?)->())?
     fileprivate var manager = CLLocationManager()
-    //private var instance: CLHelperProtocol!
 
-    public static let shared = CLHelper()
-    private override init() {
-
-    }
+    public override init() {}
 
     public func getLocation(onCompletion:@escaping ( _ locations: [CLLocation]?, _ error: Error?)->()) {
 
@@ -80,10 +76,23 @@ extension CLHelper {
 // Geocoding
 extension CLHelper {
 
+    public func getAddress(fromCoordinate coordinate:Coordinate, onCompletion: @escaping (_ address:[GeographicalAddress]?, _ error:CLHelperError?)->()) {
+
+        GeocodingHelper.reverseGeocoding(coordinate: CLLocationCoordinate2D(latitude: coordinate.latitude, longitude: coordinate.longitude), gotAddress: { (address) in
+
+            //onAddress
+            onCompletion(address, nil)
+
+        }) { (error) in
+
+            //onError
+            onCompletion(nil, error)
+        }
+    }
+
     public func getCoordinate(fromAddress address: String, onCompletion: @escaping (_ coodinate:Coordinate?, _ error: CLHelperError?)->()) {
 
-
-        GeocodingHelper.getCoordinatedFromAddress(address: address, gotCoordinate: { (userCoodinate) in
+        GeocodingHelper.forwardGeocoding(address: address, gotCoordinate: { (userCoodinate) in
 
             //onSuccess
             onCompletion(userCoodinate, nil)

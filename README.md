@@ -40,9 +40,11 @@ import CLHelper
 
 ```swift
 
-CLHelper.shared.getLocation { (locations, error) in
+let helper = CLHelper()
+helper.getLocation { (locations, error) in
 
-    print(locations)
+    // Latest Coordinate
+    print(locations?.last)
 }
 
 ```
@@ -58,21 +60,22 @@ CLHelper.shared.getLocation { (locations, error) in
 
 #### Geocoding
 
-It will convert your address string into coordinate (lat-lon).
+It will convert your address string into coordinate (lat-long).
 
 ```swift
 
-CLHelper.shared.getCoordinate(fromAddress: "New Delhi") { (coordinate, error) in
+let helper = CLHelper()
+helper.getCoordinate(fromAddress: "New Delhi") { (coordinate, error) in
 
-    guard error == nil else {
+        guard error == nil else {
 
-        print(error?.localizedDescription)
-        return
-    }
+            print(error.localizedText)
+            return
+        }
 
-    // Get Coordinate
-    print(coordinate?.latitude)
-    print(coordinate?.longitude)
+        // Get Coordinate
+        print(coordinate?.latitude)
+        print(coordinate?.longitude)
 
 }
 
@@ -84,20 +87,21 @@ It will convert your coordinate (i.e. latitude longitude) into human-readable ge
 
 ```swift
 
-// Coordinate
-let myCoordinate = CLLocationCoordinate2D(latitude: 28.581407, longitude: 77.321507)
+// Gurgaon Coordinate
+let coordinate = Coordinate(latitude: 28.4595, longitude: 77.0266)
 
-CLHelper.shared.getAddess(coodinate: myCoordinate) { (address, error) in
+let helper = CLHelper()
 
-guard error == nil else{
+helper.getAddress(fromCoordinate: coordinate) { (address, error) in
 
-//Handle error
+        guard error == nil else {
+            print(error?.localizedText)
+            return
+        }
 
-return
-}
-
-// Return Full Formatted Address
-print(address)
+        if let suitedAddress: GeographicalAddress = address?.first {
+        print(suitedAddress)
+    }
 }
 
 ```

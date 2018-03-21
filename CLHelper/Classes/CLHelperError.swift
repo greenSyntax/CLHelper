@@ -17,7 +17,7 @@ public enum CLHelperError: Error {
 
     case addressNotFound
 
-    var localizedText:String {
+    public var localizedText:String {
 
         switch self {
 
