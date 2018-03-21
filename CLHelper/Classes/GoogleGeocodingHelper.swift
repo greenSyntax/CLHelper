@@ -151,6 +151,4 @@ class GoogleGeocodingHelper {
         return nil
     }
  
-    
-    
 }

@@ -9,8 +9,8 @@
 
 Core Location framework supports majorly,
 - [x] User Current Location
-- [ ] Geocoding (via Apple Geocoder)
-- [ ] Reverse Geocoding (via Apple Geocoder)
+- [x] Geocoding (via Apple Geocoder)
+- [x] Reverse Geocoding (via Apple Geocoder)
 - [ ] Geocoding (via Google Places APIs)
 - [ ] Near By Places (via Google Landark APIs)
 - [ ] Geofencing
