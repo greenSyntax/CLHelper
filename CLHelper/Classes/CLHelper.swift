@@ -78,7 +78,7 @@ extension CLHelper {
 
     public func getAddress(fromCoordinate coordinate:Coordinate, onCompletion: @escaping (_ address:[GeographicalAddress]?, _ error:CLHelperError?)->()) {
 
-        GeocodingHelper.reverseGeocoding(coordinate: CLLocationCoordinate2D(latitude: coordinate.latitude, longitude: coordinate.longitude), gotAddress: { (address) in
+        GeocodingHelper.reverseGeocoding(coordinate: CLLocationCoordinate2D(latitude: coordinate.latitude, longitude: coordinate.longitude), address: { (address) in
 
             //onAddress
             onCompletion(address, nil)

@@ -102,7 +102,7 @@ class GeocodingHelper {
     ///   - coordinate: UserCoordinate Object
     ///   - address: Geographical Address
     ///   - error: Geocoding Error Onject
-    static func reverseGeocoding(coordinate: CLLocationCoordinate2D, gotAddress address: @escaping ([GeographicalAddress]) -> Void, onError error: @escaping (CLHelperError) -> Void) {
+    static func reverseGeocoding(coordinate: CLLocationCoordinate2D, address gotAddress: @escaping ([GeographicalAddress]) -> Void, onError error: @escaping (CLHelperError) -> Void) {
 
         // Get Location
         let location = CLLocation(latitude: coordinate.latitude, longitude: coordinate.longitude)
@@ -112,15 +112,15 @@ class GeocodingHelper {
 
             guard placeError == nil else{
 
-                print(placeError)
+                //onError
+                error(CLHelperError.addressNotFound)
                 return
             }
 
             if let lamdmarks = placemarks {
 
-                let geoObject = address(parseGeocodePlaces(placemarks: lamdmarks))
-
-                print(geoObject)
+                //onSuccess
+                gotAddress(parseGeocodePlaces(placemarks: lamdmarks))
             }
         }
     }

@@ -3,7 +3,7 @@ This application makes use of the following third party libraries:
 
 ## CLHelper
 
-Copyright (c) 2018 greenSyntax <ab.abhishek.ravi@gmail.com>
+Copyright (c) 2018 Abhishek Kumar Ravi <ab.abhishek.ravi@gmail.com>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
