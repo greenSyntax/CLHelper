@@ -73,6 +73,23 @@ extension CLHelper {
 
 }
 
+// Geofence
+extension CLHelper {
+
+    public func createGeofence(name: String, radius:Double = 500, coordinate:CLLocationCoordinate2D, onGeofenceEnter:()->(), onGeofenceExit:()->()) {
+
+        let region = CLCircularRegion(center: coordinate, radius: radius, identifier: name)
+        manager.startMonitoring(for: region)
+    }
+
+    public func deleteGeofence(name:String, coordinate:CLLocationCoordinate2D) {
+
+        let region = CLCircularRegion(center: coordinate, radius: 500, identifier: name)
+        manager.stopMonitoring(for: region)
+    }
+
+}
+
 // Geocoding
 extension CLHelper {
 
