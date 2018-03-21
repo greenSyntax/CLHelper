@@ -40,8 +40,7 @@ import CLHelper
 
 ```swift
 
-let helper = CLHelper()
-helper.getLocation { (locations, error) in
+CLHelper().getLocation { (locations, error) in
 
     // Latest Coordinate
     print(locations?.last)
@@ -52,7 +51,8 @@ helper.getLocation { (locations, error) in
 * If you have error occured, then there is an object of CLHelperError
 
 ```swift
-CLHelper.shared.getLocation { (locations, error) in
+
+CLHelper().getLocation { (locations, error) in
 
     print(error?.localizedText)
 }
@@ -64,8 +64,7 @@ It will convert your address string into coordinate (lat-long).
 
 ```swift
 
-let helper = CLHelper()
-helper.getCoordinate(fromAddress: "New Delhi") { (coordinate, error) in
+CLHelper().getCoordinate(fromAddress: "New Delhi") { (coordinate, error) in
 
         guard error == nil else {
 
@@ -90,9 +89,7 @@ It will convert your coordinate (i.e. latitude longitude) into human-readable ge
 // Gurgaon Coordinate
 let coordinate = Coordinate(latitude: 28.4595, longitude: 77.0266)
 
-let helper = CLHelper()
-
-helper.getAddress(fromCoordinate: coordinate) { (address, error) in
+CLHelper().getAddress(fromCoordinate: coordinate) { (address, error) in
 
         guard error == nil else {
             print(error?.localizedText)
@@ -106,6 +103,9 @@ helper.getAddress(fromCoordinate: coordinate) { (address, error) in
 
 ```
 
+## Best Practice
+
+* Avoid creating multiple instance of CLHelper() if there is no good reason. 
 
 
 ## Contributor

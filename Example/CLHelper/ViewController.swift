@@ -33,9 +33,7 @@ class ViewController: UIViewController, CLHelperProtocol {
         // Gurgaon Coordinate
         let coordinate = Coordinate(latitude: 28.4595, longitude: 77.0266)
 
-        let helper = CLHelper()
-
-        helper.getAddress(fromCoordinate: coordinate) { (address, error) in
+        CLHelper().getAddress(fromCoordinate: coordinate) { (address, error) in
 
             guard error == nil else {
 
@@ -51,8 +49,8 @@ class ViewController: UIViewController, CLHelperProtocol {
 
     func getCoordinate() {
 
-        let helper = CLHelper()
-        helper.getCoordinate(fromAddress: "New Delhi") { (coordinate, error) in
+
+        CLHelper().getCoordinate(fromAddress: "New Delhi") { (coordinate, error) in
 
             guard error == nil else {
 
@@ -70,8 +68,7 @@ class ViewController: UIViewController, CLHelperProtocol {
 
     func getLocation() {
 
-        let helper = CLHelper()
-        helper.getLocation { (locations, error) in
+        CLHelper().getLocation { (locations, error) in
 
             // Latest Coordinate
             print(locations?.last)
