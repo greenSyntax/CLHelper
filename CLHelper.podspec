@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'CLHelper'
-  s.version          = '1.0.4'
+  s.version          = '1.0.5'
   s.summary          = 'A Classic way to manage Core Location Jobs'
 
 # This description is used to generate tags and improve search results.

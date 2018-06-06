@@ -40,7 +40,7 @@ import CLHelper
 
 ```swift
 
-CLHelper().getLocation { (locations, error) in
+CLHelper.shared.getLocation { (locations, error) in
 
     // Latest Coordinate
     print(locations?.last)
@@ -52,7 +52,7 @@ CLHelper().getLocation { (locations, error) in
 
 ```swift
 
-CLHelper().getLocation { (locations, error) in
+CLHelper.shared.getLocation { (locations, error) in
 
     print(error?.localizedText)
 }
@@ -64,7 +64,7 @@ It will convert your address string into coordinate (lat-long).
 
 ```swift
 
-CLHelper().getCoordinate(fromAddress: "New Delhi") { (coordinate, error) in
+CLHelper.shared.getCoordinate(fromAddress: "New Delhi") { (coordinate, error) in
 
         guard error == nil else {
 
@@ -89,7 +89,7 @@ It will convert your coordinate (i.e. latitude longitude) into human-readable ge
 // Gurgaon Coordinate
 let coordinate = Coordinate(latitude: 28.4595, longitude: 77.0266)
 
-CLHelper().getAddress(fromCoordinate: coordinate) { (address, error) in
+CLHelper.shared.getAddress(fromCoordinate: coordinate) { (address, error) in
 
         guard error == nil else {
             print(error?.localizedText)
@@ -103,9 +103,21 @@ CLHelper().getAddress(fromCoordinate: coordinate) { (address, error) in
 
 ```
 
-## Best Practice
+## Versions Log
 
-* Avoid creating multiple instance of CLHelper() if there is no good reason. 
+**v1.0.5**
+- [x] README Updated
+
+**v1.0.4** 
+- [x] Singleton Class
+- [x] Example Project Added
+- [x] Added Comments in CLHelper.
+
+**v1.0.1**
+- [x] User Current Location
+- [x] Geocoding (via Apple Geocoder)
+- [x] Reverse Geocoding (via Apple Geocoder)
+
 
 
 ## Contributor
