@@ -1,7 +1,7 @@
 language: swift
 osx_image: xcode9
 script:
-    - xcodebuild clean -workspace Example/CLHelper.xcworkspace -scheme CLHelper-Example -destination "platform=iOS Simulator,name=iPhone 8,OS=11.3" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO -quiet
+    - xcodebuild clean -workspace Example/CLHelper.xcworkspace -scheme CLHelper-Example -destination "platform=iOS Simulator,name=iPhone 8,OS=11.0" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO -quiet
     - pod lib lint
 after_success:
     - bash <(curl -s https://codecov.io/bash)
