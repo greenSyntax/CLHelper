@@ -2,7 +2,7 @@
 
 [![CI Status](http://img.shields.io/travis/greenSyntax/CLHelper.svg?style=flat)](https://travis-ci.org/greenSyntax/CLHelper)
 [![Version](https://img.shields.io/cocoapods/v/CLHelper.svg?style=flat)](http://cocoapods.org/pods/CLHelper)
-[![License](https://img.shields.io/cocoapods/l/CLHelper.svg?style=flat)](http://cocoapods.org/pods/CLHelper)
+[![License](https://img.shields.io/packagist/l/doctrine/orm.svg)](http://cocoapods.org/pods/CLHelper)
 [![Platform](https://img.shields.io/cocoapods/p/CLHelper.svg?style=flat)](http://cocoapods.org/pods/CLHelper)
 
 ## Features
