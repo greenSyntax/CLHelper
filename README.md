@@ -105,6 +105,9 @@ CLHelper.shared.getAddress(fromCoordinate: coordinate) { (address, error) in
 
 ## Versions Log
 
+**v1.0.6**
+- [x] Added Travis CI
+
 **v1.0.5**
 - [x] README Updated
 
