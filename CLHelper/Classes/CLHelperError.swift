@@ -17,12 +17,12 @@ public enum CLHelperError: Error {
 
     case addressNotFound
 
-    public var localizedText:String {
+    public var localizedText: String {
 
         switch self {
 
         case .noAuthorizationKey:
-            return "There is No Location Usage Key in Info.plist"
+            return "There is No Location UsageDescription Key in Info.plist"
 
         case .failedInGettingLocation:
             return "Error while getting Locations"

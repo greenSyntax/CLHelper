@@ -10,15 +10,15 @@ import Foundation
 /// Wrapper around CLPlacemark
 public struct GeographicalAddress {
 
-    var landmark: String?
-    var timestamp: Date?
-    var country: String?
-    var postalCode: String?
-    var countryCode: String?
-    var state: String?
-    var district: String?
-    var nearByPlace: String?
-    var locality: String?
-    var popularVisit: [String]?
-    var address: String?
+    public var landmark: String?
+    public var timestamp: Date?
+    public var country: String?
+    public var postalCode: String?
+    public var countryCode: String?
+    public var state: String?
+    public var district: String?
+    public var nearByPlace: String?
+    public var locality: String?
+    public var popularVisit: [String]?
+    public var address: String?
 }

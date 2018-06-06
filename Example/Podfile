@@ -2,10 +2,5 @@ use_frameworks!
 
 target 'CLHelper_Example' do
   pod 'CLHelper', :path => '../'
-
-  target 'CLHelper_Tests' do
-    inherit! :search_paths
-
-    
-  end
+ 
 end
